@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trello Clone</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+        <div class="columns" id="columns">
+            <div class="column" id="column">
+                <p class="title">Backlog</p>
+                <!-- <div class="card">Proba</div> -->
+                <div class="card-form" id="card-form">
+                    <input type="text" class="card-title input-add-card" id="input-add-card"  placeholder="Enter a title for this card...">
+                    <div class="add-close">
+                        <div class="btn-add" id="btn-add">Add</div>
+                        <div class="close" id="close">Close</div>
+                    </div>
+                </div>
+                <div class="add-card" id="add-card">
+                    + Add a card
+                </div>
+            </div>
+            
+            <div class="column" id="column">
+                <p class="title">In Progress</p>
+                <div class="add-card" id="add-card">
+                    + Add a card
+                </div>
+            </div>
+    
+            <div class="column" id="column">
+                <p class="title">Complete</p>
+                <div class="add-card" id="add-card">
+                    + Add a card
+                </div>
+            </div>
+    
+            <div class="column" id="column">
+                <p class="title">On Hold</p>
+                <div class="add-card" id="add-card">
+                    + Add a card
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
