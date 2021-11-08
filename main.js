@@ -3,9 +3,11 @@ var cardForm = document.getElementById("card-form");
 var closeX = document.querySelectorAll(".close");
 var btnAdd = document.querySelectorAll(".btn-add");
 var inputAddCard = document.getElementById("input-add-card");
-const all_column = document.querySelectorAll(".column");
+const allColumn = document.querySelectorAll(".column");
 var createColumn = document.getElementById("create");
 var columns = document.getElementById("columns");
+const data = [];
+
 
 addACard.forEach(button => {
     button.addEventListener("click", (event) => {
@@ -73,7 +75,7 @@ function dragNDrop() {
         })
     })
 
-    all_column.forEach(column => {
+    allColumn.forEach(column => {
         column.addEventListener('dragover', e => {
             e.preventDefault();
             const afterElement = getDragAfterElement(column, e.clientY);
@@ -102,12 +104,11 @@ function dragNDrop() {
     }
 }
 
-const data = [];
 function dataForLocalStorage() {
     data.length = 0;
-    const all_column = document.querySelectorAll(".column");
+    const allColumn = document.querySelectorAll(".column");
 
-    all_column.forEach((column, index) => {
+    allColumn.forEach((column, index) => {
         const title = column.querySelector(".title").textContent;
         const cardItems = column.querySelectorAll(".card");
         const cardItemsContent = [];
